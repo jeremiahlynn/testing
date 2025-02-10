@@ -1,0 +1,10 @@
+<input
+    #input
+    (focus)="focused = true"
+    (blur)="focused = false"
+    [value]="value"
+    (input)="valueChange.emit($event.target.value)"
+/>
+<span class="disabled-value">
+    {{ value }}
+</span>

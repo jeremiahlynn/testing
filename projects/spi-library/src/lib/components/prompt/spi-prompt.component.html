@@ -1,0 +1,6 @@
+<div class="container" [style.background-color]="containerColor">
+    @if (clickOutsideToClose !== false) {
+        <spi-text class="close" (click)="shownChange.emit(false)">✕</spi-text>
+    }
+    <ng-content></ng-content>
+</div>

@@ -1,0 +1,48 @@
+:host {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    background-color: var(--idle-background, var(--theme-input-background));
+    color: var(--idle-color, var(--theme-primary-accent));
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: var(--idle-border, var(--theme-input-border));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+
+    &.disabled {
+        border-color: var(--disabled-border, var(--theme-input-disabled));
+        background-color: var(
+            --disabled-background,
+            var(--theme-input-disabled)
+        );
+        color: var(--disabled-color, var(--theme-text-disabled));
+    }
+
+    &:not(.disabled) {
+        &:focus {
+            border-color: var(--focused-border, var(--theme-primary-accent));
+            background-color: var(
+                --focused-background,
+                var(--theme-input-background)
+            );
+            color: var(--focused-color, var(--theme-primary-accent));
+        }
+
+        &:hover {
+            cursor: pointer;
+            border-color: var(--hovered-border, var(--theme-input-border));
+            background-color: var(
+                --hovered-background,
+                var(--theme-input-background)
+            );
+            color: var(--hovered-color, var(--theme-primary-accent));
+        }
+    }
+}

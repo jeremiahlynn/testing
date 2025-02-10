@@ -1,0 +1,59 @@
+:host {
+    position: relative;
+    width: auto;
+    min-height: 16px;
+    height: auto;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    border-color: var(--border, var(--theme-input-border));
+    background-color: var(--background, var(--theme-input-background));
+
+    .progress {
+        z-index: 0;
+        position: absolute;
+        height: 100%;
+    }
+
+    &.left-to-right {
+        background-color: var(--background, var(--theme-input-background));
+
+        .progress {
+            left: 0;
+            background-color: var(--color, var(--theme-primary-accent));
+        }
+    }
+
+    &.right-to-left {
+        background-color: var(--color, var(--theme-primary-accent));
+
+        .progress {
+            right: 0;
+            background-color: var(--background, var(--theme-input-background));
+        }
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &.left {
+            justify-content: start;
+        }
+
+        &.center {
+            justify-content: center;
+        }
+
+        &.right {
+            justify-content: end;
+        }
+    }
+}

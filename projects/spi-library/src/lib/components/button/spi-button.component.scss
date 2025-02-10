@@ -1,0 +1,79 @@
+:host {
+    width: auto;
+    height: 28px;
+
+    border-radius: 14px;
+    border-style: solid;
+    border-width: 1px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-color: var(--button-idle-border);
+    background-color: var(--button-idle-background);
+
+    color: var(--button-idle-color);
+    --color: var(--button-idle-color);
+
+    overflow: hidden;
+
+    --font-size: 12px;
+
+    &.disabled {
+        background-color: var(--button-disabled-background);
+        border-color: var(--button-disabled-border);
+        color: var(--button-disabled-color);
+        --color: var(--button-disabled-color);
+    }
+
+    &:not(.disabled) {
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--button-hovered-background);
+            border-color: var(--button-hovered-border);
+            color: var(--button-hovered-color);
+            --color: var(--button-hovered-color);
+        }
+    }
+
+    /* Disabled Variables */
+    --button-disabled-color: var(--disabled-color, var(--theme-text-disabled));
+    --button-disabled-background: var(
+        --disabled-background,
+        var(--theme-input-disabled)
+    );
+    --button-disabled-border: var(
+        --disabled-border,
+        var(--theme-input-disabled)
+    );
+
+    /* Hovered Variables */
+    --button-hovered-color: var(--hovered-color, var(--theme-input-background));
+    --button-hovered-background: var(
+        --hovered-background,
+        var(--theme-text-primary)
+    );
+    --button-hovered-border: var(--hovered-border, var(--theme-text-primary));
+
+    &.variant-primary {
+        /* Idle Variables */
+        --button-idle-color: var(--idle-color, var(--theme-text-primary));
+        --button-idle-background: var(
+            --idle-background,
+            var(--theme-input-background)
+        );
+        --button-idle-border: var(--idle-border, var(--theme-input-border));
+    }
+
+    &.variant-highlight {
+        /* Idle Variables */
+        --button-idle-color: var(--idle-color, var(--theme-text-primary));
+        --button-idle-background: var(
+            --idle-background,
+            var(--theme-primary-accent)
+        );
+        --button-idle-border: var(--idle-border, var(--theme-primary-accent));
+    }
+}

@@ -1,0 +1,27 @@
+// Temporary home for color variables
+:root {
+}
+
+@media (prefers-color-scheme: darkest) {
+    :root {
+        --theme-logo: url('./assets/dark/logo.svg');
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-logo: url('./assets/dark/logo.svg');
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --theme-logo: url('./assets/light/logo.svg');
+    }
+}
+
+@media (prefers-color-scheme: lightest) {
+    :root {
+        --theme-logo: url('./assets/light/logo.svg');
+    }
+}

@@ -1,0 +1,170 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+@media (prefers-color-scheme: darkest) {
+    :root {
+        --theme-primary-accent: rgb(43, 110, 192);
+        --theme-secondary-accent: rgb(57, 83, 109);
+
+        --theme-background: rgb(50, 50, 50);
+        --theme-background-contrast: rgb(38, 38, 38);
+        --theme-background-medium-contrast: rgb(36, 36, 36);
+        --theme-background-high-contrast: rgb(33, 33, 33);
+
+        --theme-input-border: rgb(82, 82, 82);
+        --theme-input-background: rgb(42, 42, 42);
+        --theme-input-disabled: rgb(57, 57, 57);
+
+        --theme-text-primary: rgb(231, 231, 231);
+        --theme-text-secondary: rgb(150, 150, 150);
+        --theme-text-tertiary: rgb(90, 90, 90);
+        --theme-text-disabled: rgb(101, 101, 101);
+
+        --theme-toast-success-meter: rgb(50, 143, 50);
+        --theme-toast-success-background: rgb(27, 120, 27);
+        --theme-toast-success-color: white;
+        --theme-toast-success-link: rgb(92, 165, 255);
+
+        --theme-toast-info-meter: rgb(108, 108, 108);
+        --theme-toast-info-background: rgb(86, 86, 86);
+        --theme-toast-info-color: white;
+        --theme-toast-info-link: rgb(92, 165, 255);
+
+        --theme-toast-warning-meter: rgb(180, 122, 23);
+        --theme-toast-warning-background: rgb(157, 103, 8);
+        --theme-toast-warning-color: white;
+        --theme-toast-warning-link: rgb(92, 165, 255);
+
+        --theme-toast-error-meter: rgb(143, 50, 50);
+        --theme-toast-error-background: rgb(120, 27, 27);
+        --theme-toast-error-color: white;
+        --theme-toast-error-link: rgb(92, 165, 255);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-primary-accent: rgb(63, 128, 203);
+        --theme-secondary-accent: rgb(79, 106, 132);
+
+        --theme-background: rgb(83, 83, 83);
+        --theme-background-contrast: rgb(66, 66, 66);
+        --theme-background-medium-contrast: rgb(59, 59, 59);
+        --theme-background-high-contrast: rgb(56, 56, 56);
+
+        --theme-input-border: rgb(116, 116, 116);
+        --theme-input-background: rgb(69, 69, 69);
+        --theme-input-disabled: rgb(95, 95, 95);
+
+        --theme-text-primary: rgb(243, 243, 243);
+        --theme-text-secondary: rgb(170, 170, 170);
+        --theme-text-tertiary: rgb(120, 120, 120);
+        --theme-text-disabled: rgb(120, 120, 120);
+
+        --theme-toast-success-meter: rgb(50, 143, 50);
+        --theme-toast-success-background: rgb(27, 120, 27);
+        --theme-toast-success-color: white;
+        --theme-toast-success-link: rgb(91, 168, 255);
+
+        --theme-toast-info-meter: rgb(59, 59, 59);
+        --theme-toast-info-background: rgb(48, 48, 48);
+        --theme-toast-info-color: white;
+        --theme-toast-info-link: rgb(91, 168, 255);
+
+        --theme-toast-warning-meter: rgb(180, 122, 23);
+        --theme-toast-warning-background: rgb(157, 103, 8);
+        --theme-toast-warning-color: white;
+        --theme-toast-warning-link: rgb(91, 168, 255);
+
+        --theme-toast-error-meter: rgb(143, 50, 50);
+        --theme-toast-error-background: rgb(120, 27, 27);
+        --theme-toast-error-color: white;
+        --theme-toast-error-link: rgb(91, 168, 255);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --theme-primary-accent: rgb(74, 134, 224);
+        --theme-secondary-accent: rgb(136, 166, 199);
+
+        --theme-background: rgb(184, 184, 184);
+        --theme-background-contrast: rgb(163, 163, 163);
+        --theme-background-medium-contrast: rgb(155, 155, 155);
+        --theme-background-high-contrast: rgb(148, 148, 148);
+
+        --theme-input-border: rgb(143, 143, 143);
+        --theme-input-background: rgb(223, 223, 223);
+        --theme-input-disabled: rgb(191, 191, 191);
+
+        --theme-text-primary: rgb(63, 63, 63);
+        --theme-text-secondary: rgb(100, 100, 100);
+        --theme-text-tertiary: rgb(120, 120, 120);
+        --theme-text-disabled: rgb(95, 95, 95);
+
+        --theme-toast-success-meter: rgb(143, 231, 143);
+        --theme-toast-success-background: rgb(176, 243, 176);
+        --theme-toast-success-color: black;
+        --theme-toast-success-link: rgb(47, 109, 202);
+
+        --theme-toast-info-meter: rgb(220, 220, 220);
+        --theme-toast-info-background: rgb(240, 240, 240);
+        --theme-toast-info-color: black;
+        --theme-toast-info-link: rgb(47, 109, 202);
+
+        --theme-toast-warning-meter: rgb(222, 198, 118);
+        --theme-toast-warning-background: rgb(240, 218, 144);
+        --theme-toast-warning-color: black;
+        --theme-toast-warning-link: rgb(47, 109, 202);
+
+        --theme-toast-error-meter: rgb(231, 143, 143);
+        --theme-toast-error-background: rgb(243, 176, 176);
+        --theme-toast-error-color: black;
+        --theme-toast-error-link: rgb(47, 109, 202);
+    }
+}
+
+@media (prefers-color-scheme: lightest) {
+    :root {
+        --theme-primary-accent: rgb(94, 155, 237);
+        --theme-secondary-accent: rgb(189, 209, 239);
+
+        --theme-background: rgb(240, 240, 240);
+        --theme-background-contrast: rgb(219, 219, 219);
+        --theme-background-medium-contrast: rgb(211, 211, 211);
+        --theme-background-high-contrast: rgb(204, 204, 204);
+
+        --theme-input-border: rgb(189, 189, 189);
+        --theme-input-background: rgb(251, 251, 251);
+        --theme-input-disabled: rgb(220, 220, 220);
+
+        --theme-text-primary: rgb(88, 88, 88);
+        --theme-text-secondary: rgb(140, 140, 140);
+        --theme-text-tertiary: rgb(170, 170, 170);
+        --theme-text-disabled: rgb(128, 128, 128);
+
+        --theme-toast-success-meter: rgb(143, 231, 143);
+        --theme-toast-success-background: rgb(176, 243, 176);
+        --theme-toast-success-color: black;
+        --theme-toast-success-link: rgb(47, 109, 202);
+
+        --theme-toast-info-meter: rgb(180, 180, 180);
+        --theme-toast-info-background: rgb(200, 200, 200);
+        --theme-toast-info-color: black;
+        --theme-toast-info-link: rgb(49, 110, 189);
+
+        --theme-toast-warning-meter: rgb(222, 198, 118);
+        --theme-toast-warning-background: rgb(240, 218, 144);
+        --theme-toast-warning-color: black;
+        --theme-toast-warning-link: rgb(49, 110, 189);
+
+        --theme-toast-error-meter: rgb(231, 143, 143);
+        --theme-toast-error-background: rgb(243, 176, 176);
+        --theme-toast-error-color: black;
+        --theme-toast-error-link: rgb(49, 110, 189);
+    }
+}

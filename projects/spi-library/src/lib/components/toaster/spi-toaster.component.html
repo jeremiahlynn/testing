@@ -1,0 +1,47 @@
+<div id="sp-toaster" [class]="position">
+    @for (toast of toasterService.toasts(); track toast.id) {
+        <div
+            class="toast {{ toast.type }}"
+            (click)="toasterService.remove(toast.id)"
+        >
+            <spi-text>
+                @for (message of toast.message; track $index) {
+                    @if (isLink(message)) {
+                        <span
+                            class="link"
+                            (click)="navService.goTo(message.to)"
+                            >{{ message.text }}</span
+                        >
+                    } @else if (isCopy(message)) {
+                        <span
+                            class="copy"
+                            (click)="toClipboard($event, message.copy)"
+                            >⧉ {{ message.text }}</span
+                        >
+                    } @else if (isCustom(message)) {
+                        <span class="custom">
+                            <ng-container
+                                [ngTemplateOutlet]="customToaster"
+                                [ngTemplateOutletContext]="{
+                                    type: message.custom,
+                                    text: message.text,
+                                }"
+                            />
+                        </span>
+                    } @else {
+                        <span>{{ message.text }}</span>
+                    }
+                }
+            </spi-text>
+
+            @if (toast.duration > 0) {
+                <div
+                    class="meter"
+                    [style.width]="
+                        100 - (100 * toast.time) / toast.duration + '%'
+                    "
+                ></div>
+            }
+        </div>
+    }
+</div>

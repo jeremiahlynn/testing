@@ -1,0 +1,20 @@
+<spi-router default="home">
+    <spi-toaster />
+    <spi-outlet path="home" fallback><home-page></home-page></spi-outlet>
+    <spi-outlet path="images"> <images-page></images-page> </spi-outlet>
+    <spi-outlet path="quickcrop">
+        <quickcrop-page></quickcrop-page>
+    </spi-outlet>
+    <spi-outlet path="designs"> <designs-page></designs-page> </spi-outlet>
+    <spi-outlet path="captions"> <captions-page></captions-page> </spi-outlet>
+    <spi-outlet path="portraits">
+        <portraits-page></portraits-page>
+    </spi-outlet>
+    <spi-outlet path="preflight">
+        <preflight-page></preflight-page>
+    </spi-outlet>
+    <spi-outlet path="index">
+        <index-page></index-page>
+    </spi-outlet>
+    <spi-outlet path="yearbook"> <yearbook-page></yearbook-page> </spi-outlet>
+</spi-router>

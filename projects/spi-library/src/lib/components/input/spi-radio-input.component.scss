@@ -1,0 +1,50 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    .label {
+        margin-left: var(--spacing, 5px);
+    }
+
+    &.disabled {
+        .radio {
+            .filled {
+                background-color: var(--disabled, var(--theme-text-disabled));
+            }
+
+            border-color: var(--disabled, var(--theme-text-disabled));
+        }
+    }
+}
+
+.radio {
+    width: 16px;
+    height: 16px;
+
+    background-color: var(--background, var(--theme-input-background));
+
+    border-style: solid;
+    border-radius: 20%;
+    border-width: 1px;
+    border-color: var(--color, var(--theme-primary-accent));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+
+    .filled {
+        width: 88%;
+        height: 88%;
+        border-radius: 10%;
+        background-color: var(--color, var(--theme-primary-accent));
+    }
+}
+
+.label {
+    color: var(--theme-text-primary);
+    --color: var(--theme-text-primary);
+}

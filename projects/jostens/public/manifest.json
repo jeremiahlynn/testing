@@ -1,0 +1,65 @@
+{
+    "id": "com.spi.jostens",
+    "name": "Jostens",
+    "version": "1.0.0",
+    "main": "index.html",
+    "manifestVersion": 5,
+    "host": [
+        {
+            "app": "ID",
+            "minVersion": "19.0"
+        }
+    ],
+    "featureFlags": {
+        "enableSWCSupport": true
+    },
+    "requiredPermissions": {
+        "allowCodeGenerationFromStrings": true,
+        "network": {
+            "domains": ["https://demo.silcn.co"]
+        },
+        "launchProcess": {
+            "schemes": ["https"]
+        },
+        "localFileSystem": "fullAccess"
+    },
+    "entrypoints": [
+        {
+            "type": "panel",
+            "id": "app",
+            "label": {
+                "default": "Jostens Yearbooks"
+            },
+            "minimumSize": {
+                "width": 320,
+                "height": 540
+            },
+            "maximumSize": {
+                "width": 320,
+                "height": 2000
+            },
+            "preferredDockedSize": {
+                "width": 320,
+                "height": 540
+            },
+            "preferredFloatingSize": {
+                "width": 320,
+                "height": 540
+            },
+            "icons": [
+                {
+                    "width": 23,
+                    "height": 23,
+                    "path": "icon.svg"
+                }
+            ]
+        }
+    ],
+    "icons": [
+        {
+            "width": 23,
+            "height": 23,
+            "path": "icon.svg"
+        }
+    ]
+}

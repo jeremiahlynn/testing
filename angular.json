@@ -1,0 +1,73 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+        "jostens": {
+            "projectType": "application",
+            "schematics": {
+                "@schematics/angular:component": {
+                    "style": "scss"
+                }
+            },
+            "root": "projects/jostens",
+            "sourceRoot": "projects/jostens/src",
+            "prefix": "jostens",
+            "architect": {
+                "build": {
+                    "builder": "@angular-builders/custom-webpack:browser",
+                    "options": {
+                        "allowedCommonJsDependencies": ["jszip"],
+                        "indexTransform": "projects/spi-library/shared/index-html-transformer.cjs",
+                        "outputPath": "dist",
+                        "index": "projects/jostens/src/index.html",
+                        "main": "projects/jostens/src/main.ts",
+                        "polyfills": [
+                            "projects/spi-library/shared/polyfill.js",
+                            "zone.js"
+                        ],
+                        "tsConfig": "projects/jostens/tsconfig.json",
+                        "inlineStyleLanguage": "scss",
+                        "assets": [
+                            {
+                                "glob": "**/*",
+                                "input": "projects/jostens/icons",
+                                "output": "icons"
+                            },
+                            {
+                                "glob": "**/*",
+                                "input": "projects/spi-library/shared/public"
+                            },
+                            {
+                                "glob": "**/*",
+                                "input": "projects/jostens/public"
+                            }
+                        ],
+                        "styles": [
+                            "projects/spi-library/shared/global.css",
+                            "projects/jostens/styles.scss"
+                        ],
+                        "scripts": ["projects/spi-library/shared/load.js"]
+                    },
+                    "configurations": {
+                        "production": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/jostens/environments/environment.ts",
+                                    "with": "projects/jostens/environments/environment.prod.ts"
+                                }
+                            ],
+                            "outputHashing": "all"
+                        },
+                        "development": {
+                            "optimization": false,
+                            "extractLicenses": false,
+                            "sourceMap": false
+                        }
+                    },
+                    "defaultConfiguration": "production"
+                }
+            }
+        }
+    }
+}

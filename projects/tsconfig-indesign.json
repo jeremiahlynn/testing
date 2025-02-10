@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "checkJs": true,
+        "lib": ["ES2022"]
+    },
+    "include": [
+        "./**/indesign/**/*.jsx",
+        "./spi-library/shared/types/script.d.ts",
+        "./spi-types/types/extendscript/InDesign"
+    ]
+}

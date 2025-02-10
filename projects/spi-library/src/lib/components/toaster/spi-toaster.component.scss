@@ -1,0 +1,143 @@
+:host {
+    position: relative;
+    z-index: 100;
+
+    #sp-toaster {
+        position: fixed;
+        z-index: 100;
+        width: calc(100% - 20px);
+        margin: 10px;
+
+        display: flex;
+
+        &.top {
+            top: 0;
+            flex-direction: column;
+
+            .toast:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+
+        &.bottom {
+            bottom: 0;
+            flex-direction: column-reverse;
+
+            .toast:not(:last-child) {
+                margin-top: 10px;
+            }
+        }
+
+        .toast {
+            border-radius: 2px;
+            cursor: pointer;
+            overflow: hidden;
+            box-shadow: 0px 0px 4px 0px black;
+
+            spi-text {
+                span:not(:last-child) {
+                    margin-right: 3px;
+                }
+                padding: 5px 10px;
+            }
+
+            .meter {
+                height: 10px;
+            }
+
+            &.success {
+                --color: var(--success-color, var(--theme-toast-success-color));
+                color: var(--success-color, var(--theme-toast-success-color));
+                background-color: var(
+                    --success-background,
+                    var(--theme-toast-success-background)
+                );
+
+                .link {
+                    --color: var(
+                        --success-link,
+                        var(--theme-toast-success-link)
+                    );
+                    color: var(--success-link, var(--theme-toast-success-link));
+                    text-decoration: underline;
+                }
+
+                .meter {
+                    background-color: var(
+                        --success-meter,
+                        var(--theme-toast-success-meter)
+                    );
+                }
+            }
+
+            &.info {
+                --color: var(--info-color, var(--theme-toast-info-color));
+                color: var(--info-color, var(--theme-toast-info-color));
+                background-color: var(
+                    --info-background,
+                    var(--theme-toast-info-background)
+                );
+
+                .link {
+                    --color: var(--info-link, var(--theme-toast-info-link));
+                    color: var(--info-link, var(--theme-toast-info-link));
+                    text-decoration: underline;
+                }
+
+                .meter {
+                    background-color: var(
+                        --info-meter,
+                        var(--theme-toast-info-meter)
+                    );
+                }
+            }
+
+            &.warning {
+                --color: var(--warning-color, var(--theme-toast-warning-color));
+                color: var(--warning-color, var(--theme-toast-warning-color));
+                background-color: var(
+                    --warning-background,
+                    var(--theme-toast-warning-background)
+                );
+
+                .link {
+                    --color: var(
+                        --warning-link,
+                        var(--theme-toast-warning-link)
+                    );
+                    color: var(--warning-link, var(--theme-toast-warning-link));
+                    text-decoration: underline;
+                }
+
+                .meter {
+                    background-color: var(
+                        --warning-meter,
+                        var(--theme-toast-warning-meter)
+                    );
+                }
+            }
+
+            &.error {
+                --color: var(--error-color, var(--theme-toast-error-color));
+                color: var(--error-color, var(--theme-toast-error-color));
+                background-color: var(
+                    --error-background,
+                    var(--theme-toast-error-background)
+                );
+
+                .link {
+                    --color: var(--error-link, var(--theme-toast-error-link));
+                    color: var(--error-link, var(--theme-toast-error-link));
+                    text-decoration: underline;
+                }
+
+                .meter {
+                    background-color: var(
+                        --error-meter,
+                        var(--theme-toast-error-meter)
+                    );
+                }
+            }
+        }
+    }
+}

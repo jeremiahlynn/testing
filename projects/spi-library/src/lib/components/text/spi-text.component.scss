@@ -1,0 +1,14 @@
+:host {
+    sp-body {
+        margin: 0;
+        padding: 0;
+        font-size: var(--font-size, 12px);
+        font-weight: var(--font-weight, 400);
+        font-style: var(--font-style, normal);
+        color: var(--color, var(--theme-text-primary));
+
+        &.disabled {
+            color: var(--disabled, var(--theme-text-disabled));
+        }
+    }
+}

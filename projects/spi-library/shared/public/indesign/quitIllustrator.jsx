@@ -1,0 +1,1 @@
+runInIllustrator('quit.jsx', []);
