@@ -3,10 +3,7 @@
     "version": "0.0.0",
     "scripts": {
         "build": "ng build jostens --configuration production",
-        "watch": "ng build jostens --watch --configuration development",
-        "export:download": "sh scripts/export/download.sh",
-        "export:compile": "node scripts/export/compile.js",
-        "export:upload": "sh scripts/export/upload.sh"
+        "watch": "ng build jostens --watch --configuration development"
     },
     "private": true,
     "dependencies": {
